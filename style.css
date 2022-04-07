@@ -5,11 +5,11 @@
 }
 
 body {
-    /* background:linear-gradient(
+    /* background: linear-gradient(
         to right,
         rgb(21, 201, 214),
         rgb(154, 127, 250)) ; */
-    background:linear-gradient(
+    background: linear-gradient(
                 to right,
                 rgb(21, 201, 214),
                 rgb(154, 127, 250)) ;
@@ -19,7 +19,8 @@ header {
     width: 100%;
     height: 54px;
     /* background-color: #78C2C4; */
-    background:linear-gradient(
+    box-shadow: 0px 1px 1px rgba(73, 191, 224, .5);
+    background: linear-gradient(
                 to right,
                 rgb(46, 169, 223),
                 rgb(123, 144, 210)) ;
@@ -60,39 +61,87 @@ footer p {
 }
 
 main {
-    margin: 40px 40px;
-    padding: 10px 10px;
-    width: calc(100% - 60px);
+    font-family: 'Noto Serif SC', serif;
+    font-style: normal;
+
+    margin: 40px;
+    padding: 10px;
+    width: auto;
     height: calc(100% - 40px - 54px);
     display: flex;
 	flex-direction: row;
+}
+
+aside {
+    flex: 1;
+    width: auto;
+    height: 100%;
     text-align: justify;
 }
 
+aside details {
+    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+aside details summary {
+    font-family: 'Noto Serif SC', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: larger;
+}
+
+aside details ul li {
+    list-style-type: none;
+    margin: 0 12px;
+    padding: 2px 5px;
+}
+
+aside details ul li a {
+    text-decoration: none;
+    font-family: 'Noto Serif SC', serif;
+    font-style: normal;
+}
+
+aside details ul li a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+aside details ul li a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
 article {
-    flex: 1;
+    flex: 5;
+    overflow: hidden;
     height: 100%;
+    width: auto;
 
     /* background-color: darkgrey; */
-    margin: 0 0;
+    /* margin: 0 0; */
 }
 
 article section {
     margin: 10px 30px;
     padding: 20px 50px;
-
-    color: #000;
+    border-radius: 7.5px;
+    color: black;
     hyphens: auto;
+    box-shadow: 0px 0px 5px hsla(0,0%,100%,.5);
     background: hsla(0,0%,100%,.5);
-    overflow: hidden;
     position: relative;
 }
 
-section.content {
+/* section.content {
     color: var(--content);
-}
+} */
 
-section.content span {
+section.content span, div, p {
     line-height: 1.75rem;
 }
 
@@ -114,12 +163,6 @@ section.content h2 {
     font-size: 32px;
 }
 
-section.home-info {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
 section.content h3 {
     font-size: 24px;
 }
@@ -136,8 +179,7 @@ section.content h6 {
     font-size: 12px;
 }
 
-section.content a,
-.toc a:hover {
+section.content a:hover {
     box-shadow: 0 1px 0;
 }
 
@@ -175,47 +217,37 @@ section.content figure > figcaption > p {
     font-weight: normal;
 }
 
-aside {
-    width: 300px;
-    height: 100%;
-    text-align: justify;
-}
-
-aside details {
-    position: fixed;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    margin: 0 20px;
-    padding: 10px 20px;
-}
-
-aside details ul li {
-    /* list-style-type: lower-roman; */
-    margin: 0 20px;
-    padding: 5px 5px;
-}
-
-main.home {
-    margin: 40px 40px;
-    padding: 10px 10px;
-    width: calc(100% - 60px);
-    height: calc(100vh - 40px - 54px - 100px);
-    display: block;
-}
-
-/* .bilibili {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 75%;
-    margin: 3% auto;
-    text-align: center;
-}
-
-.bilibili iframe {
+section.content div.bilibili iframe {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-} */
+}
+
+section.content div.bilibili {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+}
+
+main.home {
+    font-family: 'Noto Serif SC', serif;
+    font-style: normal;
+
+    margin: 40px;
+    padding: 10px;
+    width: auto;
+    height: calc(100vh - 40px - 54px - 100px);
+    display: block;
+}
+
+section.home-info {
+    font-family: 'Noto Serif SC', serif;
+    font-style: normal;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
