@@ -9,10 +9,9 @@ body {
         to right,
         rgb(21, 201, 214),
         rgb(154, 127, 250)) ; */
-    background: linear-gradient(
-                to right,
-                rgb(21, 201, 214),
-                rgb(154, 127, 250)) ;
+    background: linear-gradient(to right,
+            rgb(21, 201, 214),
+            rgb(154, 127, 250));
 }
 
 header {
@@ -20,10 +19,9 @@ header {
     height: 54px;
     /* background-color: #78C2C4; */
     box-shadow: 0px 1px 1px rgba(73, 191, 224, .5);
-    background: linear-gradient(
-                to right,
-                rgb(46, 169, 223),
-                rgb(123, 144, 210)) ;
+    background: linear-gradient(to right,
+            rgb(46, 169, 223),
+            rgb(123, 144, 210));
 }
 
 header a {
@@ -55,7 +53,9 @@ footer {
     height: 40px;
 }
 
-footer p, span, div {
+footer p,
+span,
+div {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
@@ -69,7 +69,7 @@ main {
     width: auto;
     height: calc(100% - 40px - 54px);
     display: flex;
-	flex-direction: row;
+    flex-direction: row;
 }
 
 aside {
@@ -132,8 +132,8 @@ article section {
     border-radius: 7.5px;
     color: black;
     hyphens: auto;
-    box-shadow: 0px 0px 5px hsla(0,0%,100%,.5);
-    background: hsla(0,0%,100%,.5);
+    box-shadow: 0px 0px 5px hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .5);
     position: relative;
 }
 
@@ -202,6 +202,34 @@ section.content img {
     max-width: 100%;
 }
 
+section.content ul {
+    position: relative; 
+    left: 5%; 
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column;
+}
+
+section.content ul li {
+    color: blueviolet;
+    list-style-type: decimal;
+    height: 40px;
+    flex: 1;
+}
+
+section.content ul li a {
+    color: blueviolet;
+    text-decoration: none;
+
+    /* margin: 10px 30px;
+    padding: 20px 50px;
+    border-radius: 7.5px;
+    hyphens: auto;
+    box-shadow: 0px 0px 5px hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .5);
+    position: relative; */
+}
+
 .bilibili {
     position: relative;
     width: 100%;
@@ -226,9 +254,36 @@ main.home {
 }
 
 section.home-info {
-    font-family: 'Noto Serif SC', serif;
-
     width: 100%;
-    height: 100%;
+    height: auto;
     text-align: center;
+}
+
+section.home-info span {
+    font-family: 'Noto Serif SC', serif;
+    /* font-size: 64px; */
+    font-weight: bold;
+    font-style: normal;
+}
+
+section.steps {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+section.steps a {
+    flex: 1;
+    font-weight: 700;
+    text-align: center;
+
+    text-decoration: none;
+    margin: 10px 30px;
+    padding: 20px 50px;
+    border-radius: 7.5px;
+    color: black;
+    hyphens: auto;
+    box-shadow: 0px 0px 5px hsla(0, 0%, 100%, .5);
+    background: hsla(0, 0%, 100%, .5);
+    position: relative;
 }
