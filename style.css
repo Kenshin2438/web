@@ -137,12 +137,13 @@ article section {
     position: relative;
 }
 
-/* section.content {
-    color: var(--content);
-} */
-
-section.content span, div, p {
+section.content p,
+section.content div,
+section.content span {
     line-height: 1.75rem;
+}
+
+section.content p {
     text-indent: 2rem;
 }
 
@@ -187,7 +188,6 @@ section.content a:hover {
 section.content hr {
     margin: 20px 0;
     height: 2px;
-    background: var(--tertiary);
     border-top: 0;
     border-bottom: 0;
 }
@@ -227,18 +227,8 @@ main.home {
 
 section.home-info {
     font-family: 'Noto Serif SC', serif;
-    font-style: normal;
 
     width: 100%;
     height: 100%;
     text-align: center;
 }
-
-/* @keyframes typing{
-    from {
-        width: 0;
-    }
-}
-@keyframes caret{
-    50% { border-right-color: currentColor}
-} */
